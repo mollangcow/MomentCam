@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct Size: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Size()
-}
+let screen = UIScreen.main.bounds
+let screenWidth = screen.width
+let screenHeight = screen.height

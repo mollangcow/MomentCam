@@ -15,6 +15,7 @@
 		23A6B5052AA8680800AA4F97 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B5042AA8680800AA4F97 /* CameraModel.swift */; };
 		23A6B5092AA8682B00AA4F97 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B5082AA8682B00AA4F97 /* CameraViewModel.swift */; };
 		23A6B50B2AA8683E00AA4F97 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B50A2AA8683E00AA4F97 /* GalleryView.swift */; };
+		23BC19912AA86E24007AA2BA /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC19902AA86E24007AA2BA /* Path.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		23A6B5042AA8680800AA4F97 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraModel.swift; path = MomentCam/View/CameraModel.swift; sourceTree = SOURCE_ROOT; };
 		23A6B5082AA8682B00AA4F97 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		23A6B50A2AA8683E00AA4F97 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		23BC19902AA86E24007AA2BA /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Path.swift; path = MomentCam/ViewModel/Path.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				23A6B5022AA867FD00AA4F97 /* Size.swift */,
+				23BC19902AA86E24007AA2BA /* Path.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				231A69512A9F26FE00606C11 /* MainView.swift in Sources */,
+				23BC19912AA86E24007AA2BA /* Path.swift in Sources */,
 				23A6B50B2AA8683E00AA4F97 /* GalleryView.swift in Sources */,
 				23A6B5032AA867FD00AA4F97 /* Size.swift in Sources */,
 				23A6B5052AA8680800AA4F97 /* CameraModel.swift in Sources */,
