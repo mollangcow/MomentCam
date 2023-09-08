@@ -42,6 +42,7 @@ struct MainView: View {
                         }
                     })
                     
+                    
                     Button(action: {
                         // setting
                     }, label: {
@@ -58,30 +59,25 @@ struct MainView: View {
                 Spacer()
                 
                 HStack {
-                    
-                }
-                
-                HStack {
                     // Gallery Button
                     ZStack {
                         Circle()
                             .fill(.gray.opacity(0.2))
                             .frame(width: 68, height: 68)
-                        Circle()
-                            .stroke(lineWidth: 3)
-                            .fill(.white)
-                            .frame(width: 64, height: 64)
                         Button(action: {
                             // recording logic
                         }, label: {
                             ZStack {
                                 Circle()
-                                    .fill(.white.opacity(0.2))
-                                    .frame(width: 54, height: 54)
+                                    .fill(.white.opacity(0.3))
+                                    .frame(width: 60, height: 60)
                                 Image(systemName: "photo.stack.fill")
                                     .foregroundColor(.white)
                             }
                         })
+                        .fullScreenCover(isPresented: $isShowingGallery) {
+                            GalleryView(isShowingGalleryView: $isShowingGallery)
+                        }
                     }
                     
                     Spacer()
@@ -90,11 +86,7 @@ struct MainView: View {
                     ZStack {
                         Circle()
                             .fill(.gray.opacity(0.2))
-                            .frame(width: 80, height: 80)
-                        Circle()
-                            .stroke(lineWidth: 4)
-                            .fill(.white)
-                            .frame(width: 76, height: 76)
+                            .frame(width: 84, height: 84)
                         Button(action: {
                             // recording logic
                             withAnimation(.bouncy) {
@@ -104,12 +96,12 @@ struct MainView: View {
                             ZStack {
                                 Circle()
                                     .fill(.clear)
-                                    .frame(width: 64, height: 64)
-                                AnimationRectangle(cornerRadius: isRecording ? 4 : 32)
+                                    .frame(width: 72, height: 72)
+                                AnimationRectangle(cornerRadius: isRecording ? 4 : 36)
                                     .fill(.red)
                                     .frame(
-                                        width: isRecording ? 30 : 64,
-                                        height: isRecording ? 30: 64
+                                        width: isRecording ? 30 : 72,
+                                        height: isRecording ? 30: 72
                                     )
                             }
                         })
@@ -122,16 +114,12 @@ struct MainView: View {
                         Circle()
                             .fill(.gray.opacity(0.2))
                             .frame(width: 68, height: 68)
-                        Circle()
-                            .stroke(lineWidth: 3)
-                            .fill(.white)
-                            .frame(width: 64, height: 64)
                         Button(action: {
                             // recording logic
                         }, label: {
                             Circle()
                                 .fill(.white)
-                                .frame(width: 54, height: 54)
+                                .frame(width: 60, height: 60)
                         })
                     }
                 }
