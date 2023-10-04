@@ -10,7 +10,10 @@ import SwiftUI
 struct MainView: View {
     @State private var isRecording: Bool = false
     @State private var isPicturing: Bool = false
+    @State private var isFlash: Bool = false
+    @State private var isChangeCamera: Bool = false
     @State private var isShowingGallery: Bool = false
+    @State private var isShowingSetting: Bool = false
     
     var body: some View {
         ZStack {
@@ -20,31 +23,49 @@ struct MainView: View {
                 HStack {
                     Button(action: {
                         // flash light
+                        isFlash.toggle()
                     }, label: {
                         ZStack {
                             Circle()
                                 .fill(.white.opacity(0.2))
                                 .frame(width: 44, height: 44)
-                            Image(systemName: "bolt.fill")
-                                .foregroundColor(.yellow)
+                            Image(systemName: isFlash ? "bolt.fill" : "bolt.slash.fill")
+                                .foregroundColor(isFlash ? .yellow : .white)
                         }
                     })
                     
                     Button(action: {
                         // change camera
+                        withAnimation(.spring()) {
+                            isChangeCamera.toggle()
+                        }
                     }, label: {
                         ZStack {
                             Circle()
                                 .fill(.white.opacity(0.2))
                                 .frame(width: 44, height: 44)
                             Image(systemName: "arrow.triangle.2.circlepath")
+                                .rotationEffect(.degrees(isChangeCamera ? 180 : 0))
                                 .foregroundColor(.white)
                         }
                     })
                     
+                    Spacer()
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 22)
+                            .frame(height: 44)
+                            .foregroundColor(.white.opacity(0.2))
+                        Text("00:00:00")
+                            .font(.system(size: 22))
+                            .foregroundColor(.white)
+                            .monospaced()
+                    }
+                    
+                    Spacer()
                     
                     Button(action: {
-                        // setting
+                        isShowingSetting.toggle()
                     }, label: {
                         ZStack {
                             Circle()
@@ -54,7 +75,11 @@ struct MainView: View {
                                 .foregroundColor(.white)
                         }
                     })
+                    .fullScreenCover(isPresented: $isShowingSetting) {
+                        SettingView(isShowingSetting: $isShowingSetting)
+                    }
                 }
+                .padding(.horizontal, 20)
                 
                 Spacer()
                 
@@ -65,18 +90,18 @@ struct MainView: View {
                             .fill(.gray.opacity(0.2))
                             .frame(width: 68, height: 68)
                         Button(action: {
-                            // recording logic
+                            isShowingGallery.toggle()
                         }, label: {
                             ZStack {
                                 Circle()
-                                    .fill(.white.opacity(0.3))
-                                    .frame(width: 60, height: 60)
+                                    .fill(.gray.opacity(0.3))
+                                    .frame(width: 62, height: 62)
                                 Image(systemName: "photo.stack.fill")
                                     .foregroundColor(.white)
                             }
                         })
                         .fullScreenCover(isPresented: $isShowingGallery) {
-                            GalleryView(isShowingGalleryView: $isShowingGallery)
+                            GalleryView(isShowingGallery: $isShowingGallery)
                         }
                     }
                     
@@ -124,13 +149,12 @@ struct MainView: View {
                     }
                 }
                 .padding(.horizontal, 40)
+                .padding(.bottom, 20)
             }
         }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
+#Preview {
+    MainView()
 }

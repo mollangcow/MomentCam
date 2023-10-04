@@ -1,14 +1,14 @@
 //
-//  GalleryView.swift
+//  SettingView.swift
 //  MomentCam
 //
-//  Created by kimsangwoo on 2023/09/06.
+//  Created by kimsangwoo on 2023/09/23.
 //
 
 import SwiftUI
 
-struct GalleryView: View {
-    @Binding var isShowingGallery: Bool
+struct SettingView: View {
+    @Binding var isShowingSetting: Bool
     
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct GalleryView: View {
             VStack(spacing: 0) {
                 HStack {
                     Button(action: {
-                        isShowingGallery.toggle()
+                        isShowingSetting.toggle()
                     }, label: {
                         ZStack {
                             Rectangle()
@@ -31,7 +31,7 @@ struct GalleryView: View {
                     
                     Spacer()
                     
-                    Text("Gallery")
+                    Text("Setting")
                         .font(.system(size: 17, weight: .bold))
                         .foregroundStyle(.white)
                     
@@ -49,6 +49,7 @@ struct GalleryView: View {
     }
 }
 
+
 #Preview {
-    GalleryView(isShowingGallery: .constant(true))
+    SettingView(isShowingSetting: .constant(true))
 }

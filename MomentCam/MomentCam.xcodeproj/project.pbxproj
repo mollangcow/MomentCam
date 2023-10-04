@@ -11,9 +11,11 @@
 		231A69512A9F26FE00606C11 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231A69502A9F26FE00606C11 /* MainView.swift */; };
 		231A69532A9F26FF00606C11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231A69522A9F26FF00606C11 /* Assets.xcassets */; };
 		231A69562A9F26FF00606C11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231A69552A9F26FF00606C11 /* Preview Assets.xcassets */; };
+		2342D98D2ABEFDD600689EAB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2342D98C2ABEFDD600689EAB /* SettingView.swift */; };
+		2393561D2ABD53730008545B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2393561C2ABD53730008545B /* ImagePicker.swift */; };
+		2393561F2ABD53800008545B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2393561E2ABD53800008545B /* CameraViewModel.swift */; };
+		239356212ABD53880008545B /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239356202ABD53880008545B /* CameraModel.swift */; };
 		23A6B5032AA867FD00AA4F97 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B5022AA867FD00AA4F97 /* Size.swift */; };
-		23A6B5052AA8680800AA4F97 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B5042AA8680800AA4F97 /* CameraModel.swift */; };
-		23A6B5092AA8682B00AA4F97 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B5082AA8682B00AA4F97 /* CameraViewModel.swift */; };
 		23A6B50B2AA8683E00AA4F97 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6B50A2AA8683E00AA4F97 /* GalleryView.swift */; };
 		23BC19912AA86E24007AA2BA /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC19902AA86E24007AA2BA /* Path.swift */; };
 /* End PBXBuildFile section */
@@ -24,9 +26,11 @@
 		231A69502A9F26FE00606C11 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		231A69522A9F26FF00606C11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231A69552A9F26FF00606C11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2342D98C2ABEFDD600689EAB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2393561C2ABD53730008545B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2393561E2ABD53800008545B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		239356202ABD53880008545B /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		23A6B5022AA867FD00AA4F97 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Size.swift; path = MomentCam/View/Size.swift; sourceTree = SOURCE_ROOT; };
-		23A6B5042AA8680800AA4F97 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraModel.swift; path = MomentCam/View/CameraModel.swift; sourceTree = SOURCE_ROOT; };
-		23A6B5082AA8682B00AA4F97 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		23A6B50A2AA8683E00AA4F97 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		23BC19902AA86E24007AA2BA /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Path.swift; path = MomentCam/ViewModel/Path.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -63,7 +67,7 @@
 			children = (
 				231A694E2A9F26FE00606C11 /* MomentCamApp.swift */,
 				231A695E2A9F272900606C11 /* Extension */,
-				231A695D2A9F272400606C11 /* Model */,
+				239356192ABD52730008545B /* Model */,
 				23A6B5072AA8681600AA4F97 /* ViewModel */,
 				231A695C2A9F271F00606C11 /* View */,
 				231A69522A9F26FF00606C11 /* Assets.xcassets */,
@@ -85,16 +89,9 @@
 			children = (
 				231A69502A9F26FE00606C11 /* MainView.swift */,
 				23A6B50A2AA8683E00AA4F97 /* GalleryView.swift */,
+				2342D98C2ABEFDD600689EAB /* SettingView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		231A695D2A9F272400606C11 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				23A6B5042AA8680800AA4F97 /* CameraModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		231A695E2A9F272900606C11 /* Extension */ = {
@@ -102,14 +99,23 @@
 			children = (
 				23A6B5022AA867FD00AA4F97 /* Size.swift */,
 				23BC19902AA86E24007AA2BA /* Path.swift */,
+				2393561C2ABD53730008545B /* ImagePicker.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		239356192ABD52730008545B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				239356202ABD53880008545B /* CameraModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		23A6B5072AA8681600AA4F97 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				23A6B5082AA8682B00AA4F97 /* CameraViewModel.swift */,
+				2393561E2ABD53800008545B /* CameraViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,7 +148,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					231A694A2A9F26FE00606C11 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -187,9 +193,11 @@
 				231A69512A9F26FE00606C11 /* MainView.swift in Sources */,
 				23BC19912AA86E24007AA2BA /* Path.swift in Sources */,
 				23A6B50B2AA8683E00AA4F97 /* GalleryView.swift in Sources */,
+				2342D98D2ABEFDD600689EAB /* SettingView.swift in Sources */,
+				2393561D2ABD53730008545B /* ImagePicker.swift in Sources */,
+				2393561F2ABD53800008545B /* CameraViewModel.swift in Sources */,
 				23A6B5032AA867FD00AA4F97 /* Size.swift in Sources */,
-				23A6B5052AA8680800AA4F97 /* CameraModel.swift in Sources */,
-				23A6B5092AA8682B00AA4F97 /* CameraViewModel.swift in Sources */,
+				239356212ABD53880008545B /* CameraModel.swift in Sources */,
 				231A694F2A9F26FE00606C11 /* MomentCamApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +241,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -247,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -293,6 +302,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -301,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
